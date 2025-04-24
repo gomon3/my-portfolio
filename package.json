@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write src/",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:unit": "web-test-runner --config web-test-runner.config.js",
     "test:integration": "web-test-runner --config web-test-runner.config.js integrationConfig",
     "test:e2e": "playwright test",
-    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:coverage": "web-test-runner --coverage"
   },
   "keywords": [

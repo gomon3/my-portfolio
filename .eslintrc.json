@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "lit", "testing-library"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:lit/recommended",
+      "plugin:testing-library/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": "off",
+      "lit/no-native-attributes": "off"
+    }
+  }
