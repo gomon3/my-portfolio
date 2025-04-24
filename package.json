@@ -1,0 +1,32 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portafolio  using Lit and Web Components",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src/"
+  },
+  "keywords": [
+    "portfolio",
+    "lit",
+    "web-components"
+  ],
+  "dependencies": {
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-lit": "^1.8.0",
+    "@lit/localize-tools": "^0.6.0"
+  },
+  "author": "Brandon Arturo Gomez Montenegro",
+  "license": "MIT"
+}
