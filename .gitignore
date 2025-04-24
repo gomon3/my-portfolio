@@ -31,7 +31,7 @@ yarn-error.log*
 # TypeScript y temp files
 *.tsbuildinfo
 **/*.js.map
-**/*.js
+#**/*.js
 !src/**/*.js  # Excluye JS generado, excepto si hay algunos en src/ (opcional)
 
 # Testing (ignora outputs, pero NO configs)

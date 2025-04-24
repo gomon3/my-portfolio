@@ -10,7 +10,7 @@
     "lint": "eslint src --ext .ts",
     "format": "prettier --write src/",
     "test:unit": "web-test-runner --config web-test-runner.config.js",
-    "test:integration": "web-test-runner --config web-test-runner.config.js",
+    "test:integration": "web-test-runner --config web-test-runner.config.js integrationConfig",
     "test:e2e": "playwright test",
     "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:coverage": "web-test-runner --coverage"
