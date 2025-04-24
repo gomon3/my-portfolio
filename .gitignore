@@ -28,10 +28,16 @@ yarn-error.log*
 *.sln
 *.sw?
 
+# ---------------------------
+# 👇 ¡Excepciones importantes! (Archivos que SÍ deben versionarse)
+!web-test-runner*.config.js  # Permite todos los configs de Web Test Runner
+!playwright.config.ts        # Permite la config de Playwright
+!**/.storybook/main.js       # Permite config de Storybook (si lo usas)
+
 # TypeScript y temp files
 *.tsbuildinfo
 **/*.js.map
-#**/*.js
+**/*.js
 !src/**/*.js  # Excluye JS generado, excepto si hay algunos en src/ (opcional)
 
 # Testing (ignora outputs, pero NO configs)
@@ -45,8 +51,3 @@ playwright/.cache/
 .DS_Store
 Thumbs.db
 
-# ---------------------------
-# 👇 ¡Excepciones importantes! (Archivos que SÍ deben versionarse)
-!web-test-runner*.config.js  # Permite todos los configs de Web Test Runner
-!playwright.config.ts        # Permite la config de Playwright
-!**/.storybook/main.js       # Permite config de Storybook (si lo usas)
