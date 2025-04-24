@@ -8,7 +8,12 @@
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "lint": "eslint src --ext .ts",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test:unit": "web-test-runner --config web-test-runner.config.js",
+    "test:integration": "web-test-runner --config web-test-runner.config.js",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
+    "test:coverage": "web-test-runner --coverage"
   },
   "keywords": [
     "portfolio",
@@ -16,16 +21,27 @@
     "web-components"
   ],
   "dependencies": {
+    "@vaadin/router": "^2.0.0",
     "lit": "^3.0.0"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "typescript": "^5.0.0",
+    "@lit/localize-tools": "^0.6.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
     "eslint-plugin-lit": "^1.8.0",
-    "@lit/localize-tools": "^0.6.0"
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "@web/test-runner": "^0.18.0",
+    "@open-wc/testing": "^3.1.7",
+    "@esm-bundle/chai": "^4.3.4",
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.0",
+    "@playwright/test": "^1.40.0",
+    "@types/mocha": "^10.0.6",
+    "@types/chai": "^4.3.8",
+    "istanbul": "^0.4.5",  
+    "eslint-plugin-testing-library": "^5.11.0"
   },
   "author": "Brandon Arturo Gomez Montenegro",
   "license": "MIT"

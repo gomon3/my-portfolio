@@ -34,11 +34,19 @@ yarn-error.log*
 **/*.js
 !src/**/*.js  # Excluye JS generado, excepto si hay algunos en src/ (opcional)
 
-# Testing (si usas Jest, Playwright, etc.)
+# Testing (ignora outputs, pero NO configs)
 /coverage/
 /.playwright/
 /test-results/
+playwright-report/
+playwright/.cache/
 
 # Sistemas operativos
 .DS_Store
 Thumbs.db
+
+# ---------------------------
+# 👇 ¡Excepciones importantes! (Archivos que SÍ deben versionarse)
+!web-test-runner*.config.js  # Permite todos los configs de Web Test Runner
+!playwright.config.ts        # Permite la config de Playwright
+!**/.storybook/main.js       # Permite config de Storybook (si lo usas)
